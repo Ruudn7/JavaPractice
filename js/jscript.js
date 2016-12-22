@@ -1,7 +1,7 @@
 var multiline ="linijka pierwsza\ndruga linijka\n\tcześć kochani tu Sławomir!"
 
 //dodawanie
-var number1 = 5;
+var number1 = 7;
 var number2 = 8;
 
 var rest1= number1 + number2;
@@ -29,7 +29,6 @@ var rest5 = number2/number1;
 
 var rest6 = number2 % number1;
 
-number2 += 5;
 
 var rest7 = number1 + number2;
 
@@ -81,10 +80,104 @@ if(name !== "") {
     console.log("Witaj " + "nieznajomy")
 }
 
-*/
-var name= ""
+
+var name= "Sławek"
 var username;
 
 username = name ? name : "nieznajomy" ;
 
 console.log("witaj " + username)
+
+
+if(number1===5){
+    Word = "pięć";
+} else 
+if(number1===6){
+    Word = "sześć";
+    } else 
+if(number1===7){
+    Word = "siedem";
+} else {
+    Word = "liczba nieznana";    
+    }
+
+    console.log("Wartość to " + Word + ".");
+
+
+    switch(number1) {
+        case 5:
+            word = "pięć";
+            break;
+
+        case 6:
+            word = "sześć";
+            break;
+
+        case 7:
+            word = "siedem";
+            break;
+
+        default:
+        word = "nieznane"
+}
+
+
+    console.log("Wartość to " + word + ".");
+
+    while (number2 >0) {
+        console.log(number2);
+        number2--;
+    }
+
+    var secretNumber = 2;
+
+    while (prompt("podaj liczbę") != secretNumber) {
+        alert ("nie tym razem")
+    }
+
+    alert("brawo.!");
+
+    
+
+for(var i=number1; i<=10;i++){
+    console.log(i)
+}
+
+
+var club = {
+    "Sławek": "MUTD",
+    "Zbyszek": "FCB",
+    "Rafał": "Real"
+};
+
+club2 = {};
+
+for(var key in club ){
+    club2[key] = club[key];
+}
+
+console.log(club2)
+
+  
+
+for(var i=0; i<=20;i++){
+
+    if( i % 2 !== 0){
+     console.log(i);
+    }
+}
+*/
+
+var numbers = [4, 6, 8, 15, 0, 40, 52],
+containsZero = false;
+
+for(var i=0; i<=numbers.length; i++){
+
+    console.log(numbers[i])
+
+    if(numbers[i] === 0){
+        containsZero = true;
+        break;
+    }
+}
+console.log(containsZero)
