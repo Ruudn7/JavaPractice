@@ -166,7 +166,7 @@ for(var i=0; i<=20;i++){
      console.log(i);
     }
 }
-*/
+
 
 var numbers = [4, 6, 8, 15, 0, 40, 52],
 containsZero = false;
@@ -181,3 +181,8 @@ for(var i=0; i<=numbers.length; i++){
     }
 }
 console.log(containsZero)
+*/
+
+var numbers = [1, {firstName: "Sławek"}, 4, 5, [2,5,10]];
+
+console.log(numbers);
