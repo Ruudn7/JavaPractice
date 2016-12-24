@@ -408,19 +408,33 @@ console.log(total)
 
 console.log(sum1(2,3,4,5))
  */
-
+(function(){
 var arr = [1,45,22,31,3]
 
-//arr.sort(function sortF(a, b){
-  //  return a-b ;
-//}
-//)
+
 
 function sortFunc(a, b){
 
 return a - b;
 
 }
-
+//arr.sort(function sortFunc(a, b){
+  //  return a-b ;
+//}
+//)
 arr.sort(sortFunc);
 console.log(arr)
+
+function sayHello(text, getName){
+
+    var result= text + getName();
+
+    return result;
+
+}
+
+console.log(sayHello("witaj ", function(){
+    return "Piotr";
+}));
+
+})();
