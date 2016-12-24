@@ -48,10 +48,72 @@ console.log(d3.toLocaleString())
 
 console.log(d3.getDate() + "." +( d3.getMonth() + 1) + "." + d3.getFullYear());
 
-*/
+
 
 var regex = /a+/gi;
 
 var name = "Ania";
 
 console.log(name.replace(regex, "p"))
+
+
+            //DB First lesson
+function searchDb(){
+
+
+    console.log("Otwieram")
+    db.search();
+    console.log("Zamykam")
+}
+
+try{
+
+    searchDb();
+} catch(e){
+//console.log(e); // zapis striongiem
+//console.dir(e) // zajrzenie wewnątrz obiektu
+console.log("Wystąpił błąd: " + e.message);
+} finally{
+    console.log("Zamykam")
+}
+
+*/
+
+function getData(type){
+
+if (!type){
+    throw new Error("nieprawidłowy typ");
+}
+
+    return {
+        firstName: "Sławek",
+        lastName: "Wójciga",
+    }
+}
+
+
+function searchDb(){
+
+
+    console.log("Otwieram połączenie");
+
+    console.log("Pobieram dane");
+
+    var data = getData();
+
+if(data === null){
+    throw new Error("Brak danych");
+}
+    console.log("zamykam połączenie");
+}
+
+
+try {
+    searchDb();
+} catch(e) {
+    console.log("wystąpił błąd: " + e.message);
+
+
+} finally {
+    console.log("Zamykam połączenie");
+}
