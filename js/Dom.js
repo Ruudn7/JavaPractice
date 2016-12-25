@@ -81,7 +81,7 @@ var text = document.createTextNode("treść");
 
 //MOŻNA JE PODDAWAĆ ZABIEGOM ALE NIE BĘDĄ JESZCZE WIDOCZNE
 
-*/
+
 // LEKCJA 52!!! ŁĄCZENIE ELEMENTÓW
 
 
@@ -102,3 +102,46 @@ li.appendChild( text );
 //list2.removeChild(list2.querySelector(":last-child"));
 
 list1.replaceChild(text, list1.querySelector(":last-child"));
+
+
+
+var list = document.getElementById("list");
+
+var dc = document.createDocumentFragment();
+
+for ( var i = 0; i <=5; i++){
+
+    var li= document.createElement("li");
+
+    li.appendChild(document.createTextNode("Nowy element listy " + i));
+
+    dc.appendChild(li);
+
+
+
+}
+
+list.appendChild(dc);
+
+*/
+
+var list = document.querySelector("#list");
+
+var children = list.childNodes; // pobiera wszystkie elementy z list
+var elementChildren = list.children;
+
+
+var first = list.firstChild;
+var firstElement = list.firstElementChild;
+
+var last = list.lastChild;
+var lastElement = list.lastElementChild;
+
+var second = firstElement.nextSibling;
+var secondElement = firstElement.nextElementSibling;
+
+var lastButOne = lastElement.previousSibling;
+var lastButOneElement = lastElement.previousElementSibling; 
+
+var parent = second.parentNode;
+secondElement.parentNode.removeChild(secondElement);
